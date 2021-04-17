@@ -1,0 +1,24 @@
+<div class="form-container m-auto">
+  <h3 class="mb-4">Add new book</h3>
+  <form method='post' action='/books' enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" placeholder="Enter The Book's Name" class="form-control" value= "<%= params["name"] %>"  />
+    </div>
+    <div class="form-group">
+    <label for="summary">Summary</label>
+      <textarea id="summary" name="summary" class="form-control" placeholder="Book Summary" value = "<%= params["summary"] %>" type="text"></textarea>
+    </div>
+    <div class="form-group">
+    <label for="image_url">Upload image</label>
+      <input type="file" class="form-control-file" id="image_url" name="image_url" accept="image/*">
+    </div>
+    <div class="form-group">
+    <label for="book_url">Upload book</label>
+      <input type="file" class="form-control-file" id="book_url" name="book_url" accept=".doc,.pdf">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success w-100"> Submit </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+.form-container {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 50%
+  }
+}
+
+.text-dark {
+  * {
+    color: #343a40
+  }
+}
+
+.text-base {
+  * {
+    color: rgb(46, 46, 112) !important
+  }
+}
+
+.book-page {
+  img {
+    width: 100%;
+
+    @media(min-width: 968px) {
+      width: 50%;
+    }
+  }
+}

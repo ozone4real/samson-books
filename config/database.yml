@@ -1,0 +1,18 @@
+
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: samson_books_development
+  username: "ezenwaogbonna"
+  password: ""
+
+test:
+  <<: *default
+  database: samson_books_test
+  username: "ezenwaogbonna"
+  password: ""
+
+production:
+  <<: *default

@@ -1,0 +1,14 @@
+<div class="book-page">
+  <div class="d-flex justify-content-between">
+  <h3 class="mb-3"> <%= @book.name %> </h3>
+  <div> <a class="btn btn-md btn-success d-none d-md-inline-block" href=<%= @book.book_url %> > Download </a> </div>
+  </div>
+  <img class="img-fluid" src=<%= @book.image_url %> alt=<%= @book.name %> height="500px" />
+  <article class="my-3">
+  <p>
+    <%= @book.summary %>
+  </p>
+
+    <div> <a class="btn btn-md btn-success" href=<%= @book.book_url %> > Download </a> </div>
+  </article>
+</div>

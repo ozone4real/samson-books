@@ -1,0 +1,17 @@
+<div class="books">
+
+<div>
+<div class="d-flex justify-content-between">
+  <h3> Books </h3>
+  <% if signed_in? %>
+    <div> <a class="btn btn-md btn-secondary" href="/books/new"> Add new book </a> </div>
+  <% end %>
+</div>
+
+<div class="list-group mt-4">
+  <% @books.each do |book| %>
+    <a href=<%= "/books/#{book.id}" %> class="list-group-item"> <%= book.name %> </a>
+  <% end %>
+</div>
+
+</div>
