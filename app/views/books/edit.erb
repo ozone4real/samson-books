@@ -1,0 +1,4 @@
+<div class="form-container m-auto">
+  <h3 class="mb-4">Update <%= @book.name %> </h3>
+  <%= erb :"/books/_form", locals: { request_method: "patch" } %>
+</div>

@@ -1,0 +1,22 @@
+<form method="POST" action="/books<%= "/#{@book.id}" if request_method == 'patch' %>" enctype="multipart/form-data">
+<input type="hidden" name="_method" value=<%= request_method %> />
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" placeholder="Enter The Book's Name" class="form-control" value= "<%= @book.name %>"  />
+  </div>
+  <div class="form-group">
+  <label for="summary">Summary</label>
+    <textarea id="summary" name="summary" class="form-control" placeholder="Book Summary" type="text"><%= @book.summary %></textarea>
+  </div>
+  <div class="form-group">
+  <label for="image_url">Upload image</label>
+    <input type="file" class="form-control-file" id="image_url" name="image_url" accept="image/*" value = "<%= @book.image_url %>" />
+  </div>
+  <div class="form-group">
+  <label for="book_url">Upload book</label>
+    <input type="file" class="form-control-file" id="book_url" name="book_url" accept=".doc,.pdf" value = "<%= @book.book_url %>" />
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success w-100"> Submit </button>
+  </div>
+</form>

@@ -5,16 +5,32 @@ class BooksController < ApplicationController
   end
 
   get "/books/new" do
+    @book = Book.new
     erb :"books/new"
   end
 
   post "/books" do
-    book = Book.new(book_params)
-    if book.save
-      redirect "/books/#{book.id}"
+    @book = Book.new(book_params)
+    if @book.save
+      redirect "/books/#{@book.id}"
     else
       flash[:error] = "Couldn't add book"
       redirect "/books/new"
+    end
+  end
+
+  get "/books/:id/edit" do
+    @book = Book.find(params[:id])
+    erb :"books/edit"
+  end
+
+  patch "/books/:id" do
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      redirect "/books/#{@book.id}"
+    else
+      flash[:error] = "Couldn't update book"
+      redirect "/books/edit"
     end
   end
 
