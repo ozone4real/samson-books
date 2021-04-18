@@ -11,6 +11,13 @@ module Configuration
     set :root, Pathname.new(__dir__).parent
     set :public_folder, root.join('public')
 
+    Cloudinary.config do |config|
+      config.cloud_name = 'dgo3gjxnl'
+      config.api_key = '927779654336266'
+      config.api_secret = 'p3UIl68-85RqeT6jhvdX91SPMX8'
+      config.static_file_support = true
+    end
+
     CarrierWave.configure do |config|
       config.root = public_folder
     end

@@ -23,6 +23,7 @@ gem 'require_all'
 gem 'bcrypt'
 gem 'puma'
 gem 'i18n', '~> 1.8.0'
+gem 'cloudinary'
 
 gem 'sinatra-contrib', require: ["sinatra/reloader", "sinatra/required_params", "sinatra/respond_with", "sinatra/content_for"]
 

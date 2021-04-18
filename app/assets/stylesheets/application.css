@@ -13,6 +13,10 @@
  *= require_self
 */
 
+body {
+  font-family: 'Mukta', sans-serif !important;
+}
+
 header {
   box-shadow: rgba(0,0,0,0.1) 0px 3px 20px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
