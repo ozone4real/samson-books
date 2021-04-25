@@ -1,3 +1,43 @@
-<div>
-<h1>Na we dey hia</h1>
+<div class="banner mb-5">
+  <div class="banner-item  banner-text text-muted text-center h5">
+    <div class="text-base h1"> Samson O. Ajewole </div>
+    <p> 
+  <i>is a charismatic young and dynamic gifted Pastor, prolific writer, seasoned teacher, author and musician with an insatiable passion for intimacy with God.
+He is the Convener of Divine Mandate Movement ( DMM ), a movement that sees to carrying the good news to schools, colleges, campuses and other youth oriented programs, in helping them to discover purpose, catching them young for Christ, and setting them ablaze for God.
+</i>
+    </p>
+    <a class="btn btn-success" href="/books"> View Library </a>
+  </div>
+  <div class="banner-image banner-item"> 
+  </div>
+</div>
+
+<div class="h2 text-base"> My latest book </div>
+  <% @book = Book.last %>
+  <% if @book %>
+    <div class="latest-book horizontal-card" >
+      <div class="card-item image-container">
+        <a href=<%= "/books/#{@book.id}"%> >
+          <img src=<%= @book.image_url %> alt=<%= @book.name %> />
+        </a>
+      </div>
+      <div class="card-item text-container p-3">
+        <a href=<%= "/books/#{@book.id}"%> >
+          <div class="h2 text-base"> <%= @book.name %> </div>
+          <p> <%= truncate(@book.summary, 350) %> </p>
+          <div> <a class="btn btn-md btn-success" href=<%= @book.book_url %> > Download </a></div>
+        </a>
+      </div>
+    </div>
+  <% end %>
+<div> <a class="h4 text-base text-underline" href="/books"> View All Books </a> </div>
+
+<div class="mailing-list-form my-5">
+  <div class="h4 text-base"> Subscribe to my mailing list to be updated via email about my latest books and download them.</div>
+  <form class="form" method="POST" action="/mailing_list">
+  <div class="input-group">
+    <input id="email" class="form-control" name="email" type="email" placeholder="Enter your email" />
+     <button type="submit" class="btn btn-success ml-2"> Subscribe </button>
+  </div>
+  </form>
 </div>

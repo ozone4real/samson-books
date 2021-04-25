@@ -102,11 +102,14 @@ GEM
     ruby-vips (2.1.0)
       ffi (~> 1.12)
     ruby2_keywords (0.0.4)
+    ruby_http_client (3.5.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sendgrid-ruby (6.4.0)
+      ruby_http_client (~> 3.4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -160,6 +163,7 @@ DEPENDENCIES
   require_all
   rspec
   sass (~> 3.4, >= 3.4.22)
+  sendgrid-ruby
   sinatra
   sinatra-activerecord (~> 2.0.1)
   sinatra-contrib
@@ -169,4 +173,4 @@ DEPENDENCIES
   uglifier (~> 4.2.0)
 
 BUNDLED WITH
-   2.2.9
+   2.2.16

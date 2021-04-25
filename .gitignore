@@ -16,3 +16,7 @@
 !/storage/.keep
 
 /public/uploads/*
+
+*.DS_Store
+
+/tmp/*

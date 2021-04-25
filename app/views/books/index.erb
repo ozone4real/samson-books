@@ -4,7 +4,7 @@
 <div class="d-flex justify-content-between">
   <h3> Books </h3>
   <% if signed_in? %>
-    <div> <a class="btn btn-md btn-secondary" href="/books/new"> Add new book </a> </div>
+    <div> <a href="/books/new"> Add new book <i class="fas fa-plus-circle fa-2x"></i> </a> </div>
   <% end %>
 </div>
 
@@ -12,7 +12,9 @@
   <% @books.each do |book| %>
     <div class="list-group-item d-flex justify-content-between">
     <a href=<%= "/books/#{book.id}" %>> <%= book.name %> </a>
-    <a href=<%= "/books/#{book.id}/edit" %>> <i class="fas fa-edit"></i> </a>
+    <% if signed_in? %>
+      <a href=<%= "/books/#{book.id}/edit" %> title="edit"> <i class="fas fa-edit"></i> </a>
+    <% end %>
     </div>
   <% end %>
 </div>

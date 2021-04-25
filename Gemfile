@@ -9,7 +9,7 @@ gem 'sinatra'
 gem 'activerecord', '~> 5.2.3'
 gem 'sinatra-activerecord', '~> 2.0.1'
 gem 'pg'
-
+gem 'sendgrid-ruby'
 
 gem 'sprockets', '~> 3.7'
 gem 'sprockets-helpers', '~> 1.4.0'

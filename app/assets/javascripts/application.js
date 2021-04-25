@@ -3,3 +3,15 @@
 //
 // Any JavaScript/Coffee file within this directory can be referenced here using a relative path.
 //= require_tree .
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  confirmOnClick = () => {
+    const buttons = document.querySelectorAll("[data-confirm]")
+    buttons.forEach((button) => {
+      button.onclick = () => confirm(button.dataset.confirm);
+    })
+  }
+
+  confirmOnClick()
+})

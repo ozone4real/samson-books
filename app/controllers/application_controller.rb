@@ -5,6 +5,13 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  get '/dashboard' do
+    @books = Book.all
+    @mailing_list = MailingList.all
+
+    erb :dashboard
+  end
+
   # methods that you want to be available in the views and controllers
   helpers do
     def current_user
@@ -13,6 +20,10 @@ class ApplicationController < Sinatra::Base
 
     def signed_in?
       !!current_user
+    end
+
+    def truncate(text, count)
+      "#{text[0..count]}..."
     end
   end
 end

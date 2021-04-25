@@ -17,10 +17,16 @@ body {
   font-family: 'Mukta', sans-serif !important;
 }
 
-header {
-  box-shadow: rgba(0,0,0,0.1) 0px 3px 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+main {
+  padding-bottom: 200px;
 }
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
 
 .flash {
   padding: 5px;
@@ -47,16 +53,21 @@ header {
 
 a, a:hover {
   text-decoration: unset !important;
+  color: black !important;
 }
 
 a:hover, h1, h2, h3, h4 {
   color: rgb(46, 46, 112) !important
 }
 
+.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+  font-family: 'Orelega One', cursive !important;
+}
+
 a.btn, a.btn:hover {
   color: white !important;
 }
 
-.wrapper {
-  width: 100%;
+.text-underline, .text-underline:hover {
+  text-decoration: underline !important;
 }

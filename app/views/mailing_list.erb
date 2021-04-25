@@ -1,0 +1,14 @@
+<div class="mailing_list">
+  <div class="h3"> Mailing List </div>
+  <div class="list-group">
+    <% @mailing_list.each do |item| %>
+      <div class="list-group-item d-flex justify-content-between">
+       <span> <%= item.email %> </span>
+       <form class="delete" action=<%= "/mailing_list/#{item.id}" %> method="POST">
+       <input type="hidden" name="_method" value="DELETE" />
+        <button data-confirm="Are you sure you want to delete this?" type="submit" href="#" title="delete" class="delete-btn"> <i class="fas fa-trash"></i> </button>
+      </form>
+    </div>
+    <% end %>
+  </div>
+</div>

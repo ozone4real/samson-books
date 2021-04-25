@@ -9,9 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Samson Books</title>
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Lobster&family=Mukta:wght@400&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Lobster&family=Orelega+One&display=swap&family=Mukta:wght@400&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
     <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
@@ -27,6 +26,7 @@
         <%= yield %>
       </div>
     </main>
+    <%= erb :_footer %>
   </div>
     <!--[if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>

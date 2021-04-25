@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <div class="h2 text-center"> Stats </div>
+  <div class="stats">
+    <div class="square-card card books text-center">
+      <div class="text-warning count"> <%= @books.count %> </div>
+      <p class="h5" > Books in total </p>
+      <a class="text-underline text-muted" href="/books"> View </a>
+    </div>
+
+    <div class="square-card card books text-center">
+      <div class="text-muted count"> <%= @mailing_list.count %> </div>
+      <p class="h5" > Subscribers </p>
+      <a class="text-underline text-muted" href="/mailing_list"> View </a>
+    </div>
+  </div>
+</div>
