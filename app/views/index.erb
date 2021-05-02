@@ -25,7 +25,7 @@ He is the Convener of Divine Mandate Movement ( DMM ), a movement that sees to c
         <a href=<%= "/books/#{@book.id}"%> >
           <div class="h2 text-base"> <%= @book.name %> </div>
           <p> <%= truncate(@book.summary, 350) %> </p>
-          <div> <a class="btn btn-md btn-success" href=<%= @book.book_url %> > Download </a></div>
+          <div> <a class="btn btn-md btn-success" href=<%= @book.download_url %> > Download </a></div>
         </a>
       </div>
     </div>
