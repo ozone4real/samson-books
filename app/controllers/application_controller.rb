@@ -1,13 +1,18 @@
 class ApplicationController < Sinatra::Base
   include Configuration
 
+  before "/protected/*" do
+    redirect("/") unless signed_in?
+  end
+
   get '/' do 
     erb :index
   end
 
-  get '/dashboard' do
+  get '/protected/dashboard' do
     @books = Book.all
     @mailing_list = MailingList.all
+    @total_books_download = Book.sum(:downloads).to_i
 
     erb :dashboard
   end
@@ -20,10 +25,6 @@ class ApplicationController < Sinatra::Base
 
     def signed_in?
       !!current_user
-    end
-
-    def truncate(text, count)
-      "#{text[0..count]}..."
     end
   end
 end

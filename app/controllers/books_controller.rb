@@ -4,12 +4,12 @@ class BooksController < ApplicationController
     erb :"books/index"
   end
 
-  get "/books/new" do
+  get "/protected/books/new" do
     @book = Book.new
     erb :"books/new"
   end
 
-  post "/books" do
+  post "/protected/books" do
     @book = Book.new(book_params)
     if @book.save
       redirect "/books/#{@book.id}"
@@ -19,12 +19,17 @@ class BooksController < ApplicationController
     end
   end
 
-  get "/books/:id/edit" do
+  get "/register_download/:id" do
+    book = Book.find(params[:id])
+    book&.with_lock { book.increment!(:downloads) }
+  end
+
+  get "/protected/books/:id/edit" do
     @book = Book.find(params[:id])
     erb :"books/edit"
   end
 
-  patch "/books/:id" do
+  patch "/protected/books/:id" do
     @book = Book.find(params[:id])
     if @book.update(book_params)
       redirect "/books/#{@book.id}"

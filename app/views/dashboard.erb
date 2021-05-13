@@ -3,14 +3,21 @@
   <div class="stats">
     <div class="square-card card books text-center">
       <div class="text-warning count"> <%= @books.count %> </div>
-      <p class="h5" > Books in total </p>
+      <p class="h5" >  <%= "Book".pluralize(@books.count) %> in total </p>
       <a class="text-underline text-muted" href="/books"> View </a>
     </div>
 
     <div class="square-card card books text-center">
       <div class="text-muted count"> <%= @mailing_list.count %> </div>
-      <p class="h5" > Subscribers </p>
-      <a class="text-underline text-muted" href="/mailing_list"> View </a>
+      <p class="h5" > <%= "Subscriber".pluralize(@mailing_list.count) %> </p>
+      <a class="text-underline text-muted" href="/protected/mailing_list"> View </a>
+    </div>
+
+    <div class="square-card card books text-center">
+      <div class="text-muted count"> <%= @total_books_download %> </div>
+      <p class="h5" > Book <%= "download".pluralize(@total_books_download) %> </p>
+      <small> In total </small>
+      <a class="text-underline text-muted" href="/books"> View </a>
     </div>
   </div>
 </div>

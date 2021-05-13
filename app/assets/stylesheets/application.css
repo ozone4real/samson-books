@@ -14,7 +14,7 @@
 */
 
 body {
-  font-family: 'Mukta', sans-serif !important;
+  font-family: 'PT Sans', sans-serif !important;
 }
 
 main {
@@ -33,6 +33,32 @@ main {
   border-radius: 5px;
   margin: auto;
   width: 100%;
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      border: 0;
+      overflow:hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      border: 0;
+      visibility:hidden;
+  }
 }
 
 .flash.error {

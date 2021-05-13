@@ -1,14 +1,16 @@
 <div class="book-page">
   <div class="d-flex justify-content-between">
   <h3 class="mb-3"> <%= @book.name %> </h3>
-  <div> <a class="btn btn-md btn-success d-none d-md-inline-block" href=<%= @book.download_url %> > Download </a> </div>
+  <div class="d-none d-md-inline-block"> <%= erb :_download_btn %> </div>
   </div>
   <img class="img-fluid" src=<%= @book.image_url %> alt=<%= @book.name %> height="500px" />
-  <article class="my-3">
+  <article class="my-4">
   <p>
     <%= @book.summary %>
   </p>
-
-    <div> <a class="btn btn-md btn-success" href=<%= @book.download_url %> > Download </a> </div>
   </article>
+   <div class="my-3"> <%= erb :_download_btn %> </div>
+   <% if signed_in? %>
+    <h4> <%= @book.downloads.to_i %> <%= "Download".pluralize(@book.downloads.to_i) %> </h4>
+   <% end %>
 </div>

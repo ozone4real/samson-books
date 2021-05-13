@@ -1,0 +1,8 @@
+<a class="btn download-btn btn-md btn-success" data-book-id=<%= @book.id %> href=<%= @book.download_url %> > 
+  Download
+</a>
+
+<script>
+  let bookId = $(".download-btn").data("bookId")
+  $(".download-btn").click(() => $.get(`/register_download/${bookId}`))
+</script>

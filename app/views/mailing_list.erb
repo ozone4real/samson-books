@@ -1,5 +1,8 @@
 <div class="mailing_list">
-  <div class="h3"> Mailing List </div>
+  <div class="d-flex my-3 justify-content-between align-items-center"> 
+    <div class="h3"> Mailing List </div> 
+    <a href="mailto:<%= @mailing_list.map(&:email).join(",") %>" class="btn btn-secondary"> Send Email </a> 
+  </div>
   <div class="list-group">
     <% @mailing_list.each do |item| %>
       <div class="list-group-item d-flex justify-content-between">
