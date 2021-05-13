@@ -18,6 +18,6 @@ class MailingListController < ApplicationController
       flash[:error] = "#{email} couldn't be deleted."
     end
 
-    redirect("/mailing_list")
+    redirect("/protected/mailing_list")
   end
 end

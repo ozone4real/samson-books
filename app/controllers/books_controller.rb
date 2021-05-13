@@ -15,7 +15,7 @@ class BooksController < ApplicationController
       redirect "/books/#{@book.id}"
     else
       flash[:error] = "Couldn't add book"
-      redirect "/books/new"
+      redirect "/protected/books/new"
     end
   end
 
@@ -35,7 +35,7 @@ class BooksController < ApplicationController
       redirect "/books/#{@book.id}"
     else
       flash[:error] = "Couldn't update book"
-      redirect "/books/edit"
+      redirect "/protected/books/edit"
     end
   end
 
