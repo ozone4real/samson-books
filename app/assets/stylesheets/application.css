@@ -97,3 +97,7 @@ a.btn, a.btn:hover {
 .text-underline, .text-underline:hover {
   text-decoration: underline !important;
 }
+
+.text-underline-on-hover:hover {
+  text-decoration: underline !important;
+}

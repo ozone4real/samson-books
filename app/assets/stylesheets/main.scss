@@ -10,7 +10,7 @@
 
 article {
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .fas {
@@ -167,5 +167,11 @@ footer {
   .count {
     font-weight: 600;
     font-size: 35px;
+  }
+}
+
+.list-group-item {
+  a, span {
+    font-weight: bolder;
   }
 }
