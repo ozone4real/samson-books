@@ -6,4 +6,8 @@ class Book < ApplicationRecord
   def download_url
     self[:book_url].include?("github") ? self[:book_url] : book_url
   end
+
+  def to_s
+    name
+  end
 end

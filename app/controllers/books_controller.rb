@@ -44,6 +44,16 @@ class BooksController < ApplicationController
     erb :"books/show"
   end
 
+  delete "/protected/books/:id" do
+    @book = Book.find(params[:id])
+    if @book.destroy
+      flash[:success] = "#{@book} has been deleted."
+    else
+      flash[:error] = "#{@book} couldn't be deleted."
+    end
+    redirect("/books")
+  end
+
   def book_params
     params.slice("name", "summary", "book_url", "image_url")
   end
