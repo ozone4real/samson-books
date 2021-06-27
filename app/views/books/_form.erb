@@ -2,11 +2,11 @@
 <input type="hidden" name="_method" value=<%= request_method %> />
   <div class="form-group">
     <label for="name">Name</label>
-    <input id="name" name="name" placeholder="Enter The Book's Name" class="form-control" value= "<%= @book.name %>"  />
+    <input id="name" name="name" placeholder="Enter The Book's Name" class="form-control" value= "<%= @book.name %>" required  />
   </div>
   <div class="form-group">
   <label for="summary">Summary</label>
-    <textarea id="summary" name="summary" class="form-control" placeholder="Book Summary" type="text"><%= @book.summary %></textarea>
+    <textarea id="summary" name="summary" class="form-control" placeholder="Book Summary" type="text" required><%= @book.summary %></textarea>
   </div>
   <div class="form-group">
   <label for="image_url">Upload image</label>
